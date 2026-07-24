@@ -1,0 +1,63 @@
+:root {
+    /* Color Palette - SaaS Enterprise Blue/Cyan Scheme */
+    --color-bg: #07101E; /* Primary Background */
+    --color-bg-offset: #0B1325; /* Secondary Background */
+    --color-bg-card: #111B2E; /* Cards Background */
+    --color-bg-card-hover: #15243F; /* Cards Background Hover */
+    
+    --color-primary: #14D8FF; /* Primary Accent (Cyan) */
+    --color-primary-rgb: 20, 216, 255;
+    --color-primary-dark: #00A6CC;
+    
+    --color-secondary: #58CFFF; /* Secondary Accent (Light Blue) */
+    --color-secondary-rgb: 88, 207, 255;
+    
+    --color-text-light: #FFFFFF;
+    --color-text-normal: #E6EDF5;
+    --color-text-muted: #A8B4C5; /* Secondary Text */
+    --color-text-dark: #4F5E75;
+    
+    --color-border: rgba(20, 216, 255, 0.15); /* Thin Cyan Borders */
+    --color-border-hover: rgba(20, 216, 255, 0.35);
+    
+    /* Typography */
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Outfit', sans-serif;
+    
+    /* Spacing & Layout */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4.5rem; /* Increased whitespace */
+    --spacing-xl: 9rem; /* Increased whitespace */
+    
+    --max-width: 1200px;
+    --border-radius-sm: 8px;
+    --border-radius-md: 16px;
+    --border-radius-lg: 24px;
+    
+    /* Glassmorphism Styles */
+    --glass-bg: rgba(17, 27, 46, 0.6);
+    --glass-border: rgba(20, 216, 255, 0.1);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    --glass-blur: 16px;
+    
+    /* Animations & Transitions */
+    --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-normal: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-slow: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    
+    /* Glow Effects */
+    --glow-primary: 0 0 20px rgba(20, 216, 255, 0.15);
+    --glow-primary-strong: 0 0 35px rgba(20, 216, 255, 0.35);
+    --glow-secondary: 0 0 20px rgba(88, 207, 255, 0.15);
+    
+    /* Z-Indices */
+    --z-particles: 1;
+    --z-grid: 2;
+    --z-content: 5;
+    --z-navbar: 100;
+    --z-cursor: 999;
+    --z-modal: 1000;
+    --z-loader: 10000;
+}

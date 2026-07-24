@@ -1,0 +1,19 @@
+{
+  "name": "portfolio-k-shri-lalitha",
+  "version": "1.0.0",
+  "description": "Premium recruiter-grade portfolio of K. Shri Lalitha",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx live-server ."
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "web-developer",
+    "software-engineer",
+    "design",
+    "minimalist"
+  ],
+  "author": "K. Shri Lalitha",
+  "license": "MIT"
+}

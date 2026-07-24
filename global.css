@@ -1,0 +1,280 @@
+/* Custom Resets & Base Configuration */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Adjusted for larger glass navbar */
+    font-size: 16px;
+    background-color: var(--color-bg);
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text-normal);
+    overflow-x: hidden;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle Grid Background Overlay */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(20, 216, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(20, 216, 255, 0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+    background-position: center;
+    z-index: var(--z-grid);
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(20, 216, 255, 0.1);
+    border-radius: 4px;
+    border: 2px solid var(--color-bg);
+    transition: var(--transition-fast);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+    box-shadow: var(--glow-primary);
+}
+
+/* Base Typography Reset */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-text-light);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button, input, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+/* Particle Background */
+.particles-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: var(--z-particles);
+    pointer-events: none;
+    opacity: 0.35; /* Reduced opacity for subtlety */
+}
+
+/* Custom Cursor Elements */
+.custom-cursor {
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: var(--z-cursor);
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+    mix-blend-mode: difference;
+}
+
+.cursor-trail {
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(20, 216, 255, 0.3);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: var(--z-cursor);
+    transition: transform 0.08s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s, width 0.3s, height 0.3s;
+}
+
+/* Hover effects for cursor */
+.custom-cursor.cursor-hover {
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-secondary);
+}
+
+.cursor-trail.cursor-hover {
+    width: 44px;
+    height: 44px;
+    border-color: var(--color-secondary);
+    background-color: rgba(88, 207, 255, 0.05);
+}
+
+/* Hide default cursor on desktop devices */
+@media (pointer: fine) {
+    body, a, button, [role="button"], input, select, textarea {
+        cursor: none;
+    }
+}
+
+/* Loading Screen */
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: var(--z-loader);
+    transition: opacity 0.8s cubic-bezier(0.77, 0, 0.175, 1), visibility 0.8s;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.loader-name {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--color-text-light);
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: loaderFadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.loader-subtitle {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-primary);
+    letter-spacing: 0.25em;
+    opacity: 0;
+    transform: translateY(15px);
+    animation: loaderFadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
+    text-transform: uppercase;
+    text-shadow: var(--glow-primary);
+}
+
+.loader-progress {
+    width: 180px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.03);
+    margin: 2.5rem auto 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.loader-bar {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-primary);
+    animation: loaderProgressLoad 1.8s cubic-bezier(0.65, 0.05, 0.36, 1) forwards;
+}
+
+/* Glassmorphism Common Utilities */
+.glass-panel {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    box-shadow: var(--glass-shadow);
+    border-radius: var(--border-radius-md);
+    transition: var(--transition-normal);
+}
+
+.glass-panel:hover {
+    border-color: var(--color-border-hover);
+    box-shadow: var(--glow-primary-strong);
+}
+
+/* Container Structure */
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+}
+
+/* Selection Colors */
+::selection {
+    background-color: rgba(20, 216, 255, 0.15);
+    color: var(--color-text-light);
+}
+
+/* Focus States for Accessibility */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+}
+
+/* Skeleton Loading Elements */
+.skeleton {
+    background: linear-gradient(90deg, #0b1325 25%, #111b2e 50%, #0b1325 75%);
+    background-size: 200% 100%;
+    animation: skeletonLoading 1.5s infinite;
+    border-radius: var(--border-radius-sm);
+}
+
+.skeleton-text {
+    height: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.skeleton-title {
+    height: 2rem;
+    width: 60%;
+    margin-bottom: 1rem;
+}
+
+.skeleton-rect {
+    height: 200px;
+    width: 100%;
+}

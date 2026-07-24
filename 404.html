@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | K. Shri Lalitha</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/variables.css">
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/layout.css">
+    <link rel="stylesheet" href="./assets/css/components.css">
+    <link rel="stylesheet" href="./assets/css/animations.css">
+    <style>
+        .error-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+        .error-code {
+            font-size: clamp(6rem, 15vw, 12rem);
+            font-weight: 800;
+            font-family: var(--font-primary);
+            color: transparent;
+            -webkit-text-stroke: 2px var(--color-primary);
+            text-shadow: 0 0 30px rgba(57, 255, 20, 0.2);
+            line-height: 1;
+            margin-bottom: 1rem;
+            animation: pulseGlow 3s infinite ease-in-out;
+        }
+        .error-title {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-family: var(--font-primary);
+            color: var(--color-text-light);
+            margin-bottom: 1rem;
+        }
+        .error-message {
+            font-size: 1.1rem;
+            color: var(--color-text-muted);
+            max-width: 500px;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="customCursor"></div>
+    <div class="cursor-trail" id="cursorTrail"></div>
+
+    <!-- Particle Background -->
+    <canvas id="particleCanvas" class="particles-bg"></canvas>
+
+    <div class="error-container">
+        <h1 class="error-code">404</h1>
+        <h2 class="error-title">Dimension Not Found</h2>
+        <p class="error-message">The coordinate you are looking for does not exist in this development timeline. Let's redirect you back to safety.</p>
+        <a href="./" class="btn btn-primary magnetic" data-magnetic>
+            <span>Return to Home</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./assets/js/particles.js"></script>
+    <script src="./assets/js/cursor.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Init Canvas Particles
+            if (typeof initParticles === 'function') initParticles();
+            // Init Custom Cursor
+            if (typeof initCursor === 'function') initCursor();
+        });
+    </script>
+</body>
+</html>
