@@ -225,14 +225,14 @@ window.portfolioData = {
         {
             rank: "🥈 2nd Place",
             competition: "Astramind UI/UX Competition",
-            description: "Secured second place in the institute-wide UI/UX Design Hackathon, designing an intuitive digital workspace for neurodivergent students.",
+            description: "Secured second place in the institute-wide UI/UX Design Hackathon,a prototype designed to help astronauts monitor their health, fitness, and mission-critical parameters during space missions. The interface provides real-time health tracking, life support monitoring, fitness insights, and emergency alerts to enhance astronaut safety and operational efficiency.",
             date: "May 2026",
             certificateUrl: "./Ideathon2.jpeg"
         },
         {
             rank: "🏅 4th Place",
             competition: "Vibeathon Hackathon",
-            description: "Placed fourth among 80+ competing teams with JananiCare AI, building a fully functional MVP of the maternal healthcare portal within 36 hours.",
+            description: "Placed fourth among 50+ competing teams with JananiCare AI, building a fully functional MVP of the maternal healthcare portal within 8 hours.",
             date: "April 2026",
             certificateUrl: "./vidyaHackathon.jpeg"
         }
