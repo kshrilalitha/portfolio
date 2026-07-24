@@ -76,35 +76,6 @@ window.portfolioData = {
     },
     projects: [
         {
-            id: "docushield-ai",
-            title: "DocuShield AI",
-            category: "AI / Security",
-            status: "In Progress",
-            completion: "80%",
-            image: "assets/images/project1.jpg",
-            imageGlow: "rgba(20, 216, 255, 0.15)",
-            description: "AI-powered document fraud detection and tamper forensic analysis platform for secure authentication.",
-            features: [
-                "Error Level Analysis (ELA) to locate compression anomalies",
-                "EXIF and file Metadata parsing for structural manipulation history",
-                "Forensic visual heatmaps highlighting suspicious zones",
-                "Pixel-level tampering detection using convolutional feature models",
-                "Automated risk scoring and downloadable audit reports"
-            ],
-            tech: ["Python", "FastAPI", "JavaScript", "HTML5", "CSS3"],
-            github: "https://github.com/kshrilalitha/suraksha",
-            liveDemo: "https://kshrilalitha.github.io/DocuShield-AI",
-            problem: "With the rise of high-quality image manipulation tools, verifying the authenticity of scanned identity certificates, contracts, and financial documents is incredibly difficult manually, leading to rising identity fraud and security breaches.",
-            solution: "DocuShield AI builds an accessible browser interface connected to a FastAPI analytics core. It subjects documents to multiple forensic filters including EXIF structure checks, JPEG compression analysis (ELA), and deep pixel checking, offering immediate heatmaps indicating exactly where files were edited.",
-            architecture: "Vanilla JS Frontend communicating with a backend built using Python & FastAPI. Image analytics filters are written in Python utilizing OpenCV, NumPy, and PIL. Custom convolutional architectures analyze artifacts and generate localized heatmaps served back as clean Base64 streams.",
-            challenges: "Matching alignment coordinates when performing pixel subtraction on documents with varying sizes and rotation angles.",
-            learnings: "Deepened knowledge in advanced image processing matrices, FastAPI asynchronous queue handling, and building secure frontend canvas engines.",
-            futureImprovements: [
-                "Integrating real-time OCR reading to compare metadata text with visual document content",
-                "Adding support for secure digital signatures verification (PDF hash checks)"
-            ]
-        },
-        {
             id: "jananicare-ai",
             title: "JananiCare AI",
             category: "Maternal Healthcare / AI",
@@ -131,6 +102,35 @@ window.portfolioData = {
             futureImprovements: [
                 "Developing an offline sync mode using Web SQL / IndexedDB",
                 "Partnering with local SMS gateways for automated alerts without internet access"
+            ]
+        },
+         {
+            id: "gramyaai",
+            title: "GramyaAI",
+            category: "Accessibility / EdTech",
+            status: "Completed",
+            completion: "100%",
+            image: "assets/images/project3.jpg",
+            imageGlow: "rgba(255, 255, 255, 0.05)",
+            description: "AI Interview and application platform designed for uneducated and semi-skilled workers.",
+            features: [
+                "Full audio-first conversational application wizard",
+                "Comprehensive visual dashboard for recruitment admins",
+                "Accessibility-focused layout with ultra-clear icons and large touch elements",
+                "Multilingual localization supporting local dialects",
+                "Dynamic voice questions and direct transcription matching"
+            ],
+            tech: ["React", "Node.js", "Express", "MongoDB", "CSS3"],
+            github: "https://github.com/kshrilalitha/Gramya-AI",
+            liveDemo: "https://gramya-ai.vercel.app/",
+            problem: "Semi-skilled workers frequently struggle with typing-intensive online employment applications, resulting in digital exclusion and reduced job opportunities.",
+            solution: "GramyaAI replaces dense forms with an automated voice interviewer. The system speaks to the applicant, records their verbal response, and auto-fills administrative forms behind the scenes, allowing workers to apply using their voice.",
+            architecture: "React client-side interface utilizing CSS Variables for high-contrast accessibility. A Node.js and Express backend coordinates audio file buffering, interfaces speech-to-text translators, and commits candidate records to a MongoDB document cluster.",
+            challenges: "Accurately transcribing and classifying slang and regional pronunciations of common job titles and skills.",
+            learnings: "Mastered Web Accessibility standards (WCAG 2.1 AA), state-management in complex forms, and database optimizations for heavy media schemas.",
+            futureImprovements: [
+                "Integrating real-time speech-to-text models that run fully on-device to reduce network latency",
+                "Providing interactive pictorial guides for interview prompts"
             ]
         },
         {
@@ -162,33 +162,33 @@ window.portfolioData = {
                 "Implementing a localized CMS dashboard to manage entries through a GUI"
             ]
         },
-         {
-            id: "gramyaai",
-            title: "GramyaAI",
-            category: "Accessibility / EdTech",
-            status: "Completed",
-            completion: "100%",
-            image: "assets/images/project3.jpg",
-            imageGlow: "rgba(255, 255, 255, 0.05)",
-            description: "AI Interview and application platform designed for uneducated and semi-skilled workers.",
+          {
+            id: "docushield-ai",
+            title: "DocuShield AI",
+            category: "AI / Security",
+            status: "In Progress",
+            completion: "80%",
+            image: "assets/images/project1.jpg",
+            imageGlow: "rgba(20, 216, 255, 0.15)",
+            description: "AI-powered document fraud detection and tamper forensic analysis platform for secure authentication.",
             features: [
-                "Full audio-first conversational application wizard",
-                "Comprehensive visual dashboard for recruitment admins",
-                "Accessibility-focused layout with ultra-clear icons and large touch elements",
-                "Multilingual localization supporting local dialects",
-                "Dynamic voice questions and direct transcription matching"
+                "Error Level Analysis (ELA) to locate compression anomalies",
+                "EXIF and file Metadata parsing for structural manipulation history",
+                "Forensic visual heatmaps highlighting suspicious zones",
+                "Pixel-level tampering detection using convolutional feature models",
+                "Automated risk scoring and downloadable audit reports"
             ],
-            tech: ["React", "Node.js", "Express", "MongoDB", "CSS3"],
-            github: "https://github.com/kshrilalitha/Gramya-AI",
+            tech: ["Python", "FastAPI", "JavaScript", "HTML5", "CSS3"],
+            github: "https://github.com/kshrilalitha/suraksha",
             liveDemo: null,
-            problem: "Semi-skilled workers frequently struggle with typing-intensive online employment applications, resulting in digital exclusion and reduced job opportunities.",
-            solution: "GramyaAI replaces dense forms with an automated voice interviewer. The system speaks to the applicant, records their verbal response, and auto-fills administrative forms behind the scenes, allowing workers to apply using their voice.",
-            architecture: "React client-side interface utilizing CSS Variables for high-contrast accessibility. A Node.js and Express backend coordinates audio file buffering, interfaces speech-to-text translators, and commits candidate records to a MongoDB document cluster.",
-            challenges: "Accurately transcribing and classifying slang and regional pronunciations of common job titles and skills.",
-            learnings: "Mastered Web Accessibility standards (WCAG 2.1 AA), state-management in complex forms, and database optimizations for heavy media schemas.",
+            problem: "With the rise of high-quality image manipulation tools, verifying the authenticity of scanned identity certificates, contracts, and financial documents is incredibly difficult manually, leading to rising identity fraud and security breaches.",
+            solution: "DocuShield AI builds an accessible browser interface connected to a FastAPI analytics core. It subjects documents to multiple forensic filters including EXIF structure checks, JPEG compression analysis (ELA), and deep pixel checking, offering immediate heatmaps indicating exactly where files were edited.",
+            architecture: "Vanilla JS Frontend communicating with a backend built using Python & FastAPI. Image analytics filters are written in Python utilizing OpenCV, NumPy, and PIL. Custom convolutional architectures analyze artifacts and generate localized heatmaps served back as clean Base64 streams.",
+            challenges: "Matching alignment coordinates when performing pixel subtraction on documents with varying sizes and rotation angles.",
+            learnings: "Deepened knowledge in advanced image processing matrices, FastAPI asynchronous queue handling, and building secure frontend canvas engines.",
             futureImprovements: [
-                "Integrating real-time speech-to-text models that run fully on-device to reduce network latency",
-                "Providing interactive pictorial guides for interview prompts"
+                "Integrating real-time OCR reading to compare metadata text with visual document content",
+                "Adding support for secure digital signatures verification (PDF hash checks)"
             ]
         },
         {
