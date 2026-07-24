@@ -227,7 +227,7 @@ window.portfolioData = {
             competition: "Astramind UI/UX Competition",
             description: "Secured second place in the institute-wide UI/UX Design Hackathon, designing an intuitive digital workspace for neurodivergent students.",
             date: "May 2026",
-            certificateUrl: "./ideathon2.jpeg"
+            certificateUrl: "./Ideathon2.jpeg"
         },
         {
             rank: "🏅 4th Place",
