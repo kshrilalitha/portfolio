@@ -72,9 +72,9 @@ For example, to add a new certificate, simply open `assets/js/data.js` and add a
 
 ```javascript
 {
-    title: "AWS Cloud Practitioner",
-    issuer: "Amazon Web Services (AWS)",
-    logo: "AWS",
+    title: "Introduction to Frontend Development",
+    issuer: "Coursera",
+    logo: "Coursera",
     certificateUrl: "https://your-certificate-url.com"
 }
 ```
